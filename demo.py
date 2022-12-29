@@ -25,16 +25,20 @@ cursor.execute('''
 ''')
 
 # other ways of making this work using different variations of string composition
+# using turples
 cursor.execute('''
     INSERT INTO usernames (id, names) VALUES (%s, %s);
 ''', (2, 'Gabriel'))
 
-cursor.execute('''
-    INSERT INTO usernames (id, names) VALUES (%(id)s, %(names)s);
-''', {
+# using dictionary
+query = 'INSERT INTO usernames (id, names) VALUES (%(id)s, %(names)s);'
+
+data = {
     'id': 3,
     'names': 'Shoderu'
-})
+}
+
+cursor.execute(query, data)
 
 connection.commit()
 
