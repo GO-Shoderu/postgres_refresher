@@ -8,6 +8,9 @@ cursor = connection.cursor()
 
 # beginning of transaction
 
+# making sure the table is dropped if it exist
+cursor.execute('DROP TABLE IF EXISTS usernames;')
+
 # creating a table
 cursor.execute('''
     CREATE TABLE usernames (
@@ -20,6 +23,18 @@ cursor.execute('''
 cursor.execute('''
     INSERT INTO usernames (id, names) VALUES (1, 'GO.Shoderu');
 ''')
+
+# other ways of making this work using different variations of string composition
+cursor.execute('''
+    INSERT INTO usernames (id, names) VALUES (%s, %s);
+''', (2, 'Gabriel'))
+
+cursor.execute('''
+    INSERT INTO usernames (id, names) VALUES (%(id)s, %(names)s);
+''', {
+    'id': 3,
+    'names': 'Shoderu'
+})
 
 connection.commit()
 
