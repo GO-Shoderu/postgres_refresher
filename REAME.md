@@ -18,6 +18,6 @@ run `python3 demo.py` on your terminal
 ### Checking for successful code execution
 
 To check if the code ran successfully
-*run `psql example` on your terminal to connect to the database
-*run `\dt` on your terminal and be sure that the table **usernames** is listed as one of the response
-*run `select _ from usernames;` on your terminal to be sure **GO.Shoderu** with id 1 is returned
+* run `psql example` on your terminal to connect to the database
+* run `\dt` on your terminal and be sure that the table **usernames** is listed as one of the response
+* run `select _ from usernames;` on your terminal to be sure **GO.Shoderu** with id 1 is returned
