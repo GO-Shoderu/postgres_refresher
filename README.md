@@ -37,3 +37,5 @@ example=# select * from usernames;
 
 A little warning though based on what I did on the insertion part of the transaction 🤣😂😅😂🤣
 ![image](https://user-images.githubusercontent.com/85843032/209974615-0a062e93-ce1f-4a38-ba1b-071fe0d79c8d.png)
+
+**This warning is to avoid sql injection and script attacks**
