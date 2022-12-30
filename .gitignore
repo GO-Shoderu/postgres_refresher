@@ -1,2 +1,2 @@
 #ignore files created from compiling the flask app
-/1-flask-app_and_flask-sqlalchemy/__pycache__
+/*/__pycache__
