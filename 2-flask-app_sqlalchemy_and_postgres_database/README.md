@@ -1,7 +1,6 @@
 ### About the Tech Stack
 
 - Flask - this is a library, it is going to be the web-server framework of my choice
-- Psycopg2 - this gives the ability to connect to a postgres server using Python
 - SQLAlchemy - like Psycopg2 but helps with connecting to a Flask application
 - Flask-SQLAlchemy - this is a flask extension for SQLAlchemy to easily work with SQLAlchemy and a flask application
 

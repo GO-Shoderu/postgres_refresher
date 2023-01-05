@@ -1,10 +1,6 @@
-### Installation Requirements
+### About the Tech Stack
 
-You can follow the links below for installation/setup of Postgres
-
-- [Installation and Setup](https://www.cherryservers.com/blog/how-to-install-and-setup-postgresql-server-on-ubuntu-20-04)
-- [Creating a Postgres User](https://phoenixnap.com/kb/postgres-create-user)
-- [Creating roles and managing permissions](https://www.digitalocean.com/community/tutorials/how-to-use-roles-and-manage-grant-permissions-in-postgresql-on-a-vps-2) (make sure you give your user a superuser role)
+- Psycopg2 - this gives the ability to connect to a postgres server using Python
 
 ### Creation of required database
 
