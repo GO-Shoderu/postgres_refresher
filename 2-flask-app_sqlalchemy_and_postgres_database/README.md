@@ -19,7 +19,7 @@ _All these helps connect the postgres database to a Flask application_
 
 ### Instructions for running the code and seeing output
 
-- run `FLASK_APP=flask-hello-app.py flask run` on your terminal
+- run `FLASK_APP=flask_hello_app.py FLASK_DEBUG=true flask run` on your terminal
 - run `psql example` on a new tab in your terminal
 - run `\dt` to be sure the table `persons` was successfully created as shown below
 
