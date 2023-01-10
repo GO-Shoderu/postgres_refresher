@@ -14,6 +14,7 @@ You can follow the links below for installation/setup of Postgres
 - Psycopg2 - this gives the ability to connect to a postgres server using Python
 - SQLAlchemy - like Psycopg2 but helps with connecting to a Flask application
 - Flask-SQLAlchemy - this is a flask extension for SQLAlchemy to easily work with SQLAlchemy and a flask application
+- Flask-Migrate - this is a flask extension for SQLAlchemy to make sure the data within a database isn't lost when changes to database schema erupt
 
 ### Psycopg2, SQLAlchemy & Flask-SQLAlchemy
 
