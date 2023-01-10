@@ -72,4 +72,4 @@ todoapp=# select * from todos;
 
 ```
 
-- on your browser enter 127.0.0.1:5000 or localhost:5000, the webpage should say `You have to study for AWS certificaation!!!`
+- on your browser enter 127.0.0.1:3000 or localhost:3000, the webpage should say `You have to study for AWS certificaation!!!`
