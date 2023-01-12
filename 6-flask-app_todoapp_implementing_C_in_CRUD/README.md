@@ -1,6 +1,6 @@
 This is a dummy app transfering information from information from the server to the client using a templating engine called Jinja
 
-This particular project folder touches on the R part of the CRUD (Create, Read, Update and Delete)
+This particular project folder touches on the C part of the CRUD (Create, Read, Update and Delete)
 
 ### About the Tech Stack
 
@@ -25,8 +25,7 @@ _All these helps connect the postgres database to a Flask application_
 
 - run `createdb todoapp` on your terminal
 - run `psql todoapp` on a new tab in your terminal
-- run `insert into todos (description) values ('what ever string you want');`
-- you can add as many todos as possible
+- you can add as many todos as possible from the web interface
 - run `select * from todos;`
 - run `python3 app.py` on your terminal
 
@@ -34,11 +33,12 @@ _All these helps connect the postgres database to a Flask application_
 todoapp=# select * from todos;
  id |         description
 ----+-----------------------------
-  1 | study for AWS certification
+  1 | study for aws certification
   2 | watch fullstack videos
   3 | watch more editing videos
   4 | work on alx project
-(4 rows)
+  5 | help Matshepo with python
+(5 rows)
 
 ```
 
