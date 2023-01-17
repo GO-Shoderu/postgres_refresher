@@ -85,4 +85,23 @@ todoapp=# select * from todos;
 
 ```
 
-- on your browser enter 127.0.0.1:5000 or localhost:5000, the webpage should list out all the descriptions from the database
+#### after checking off some lists
+
+```
+todoapp=# select * from todos;
+ id |                  description                  | completed
+----+-----------------------------------------------+-----------
+  6 | do some meditation                            | f
+  7 | call family                                   | f
+  8 | write what needs to be done tomorrow          | f
+  9 | remember to work on Tutu's design as promised | f
+ 10 | get enough sleep                              | f
+  1 | study for aws certification                   | t
+  2 | watch fullstack videos                        | t
+  3 | watch more editing videos                     | t
+  4 | work on alx project                           | t
+  5 | help Matshepo with python                     | t
+(10 rows)
+```
+
+- on your browser enter 127.0.0.1:5000 or localhost:5000, the webpage should list out all the descriptions from the database with check boxes presceding each of the descriptions
