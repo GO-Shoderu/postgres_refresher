@@ -45,6 +45,8 @@ _All these helps connect the postgres database to a Flask application_
 - run `select * from todos;` on your terminal to see newly created todos
 - run `python3 app.py` on your terminal
 
+#### before migration
+
 ```
 todoapp=# select * from todos;
  id |                  description
@@ -59,6 +61,26 @@ todoapp=# select * from todos;
   8 | write what needs to be done tomorrow
   9 | remember to work on Tutu's design as promised
  10 | get enough sleep
+(10 rows)
+
+```
+
+#### after migration
+
+```
+todoapp=# select * from todos;
+ id |                  description                  | completed
+----+-----------------------------------------------+-----------
+  1 | study for aws certification                   | f
+  2 | watch fullstack videos                        | f
+  3 | watch more editing videos                     | f
+  4 | work on alx project                           | f
+  5 | help Matshepo with python                     | f
+  6 | do some meditation                            | f
+  7 | call family                                   | f
+  8 | write what needs to be done tomorrow          | f
+  9 | remember to work on Tutu's design as promised | f
+ 10 | get enough sleep                              | f
 (10 rows)
 
 ```
