@@ -8,7 +8,20 @@
       ul {
         list-style: none;
         padding: 0%;
-        margin: 0%;
+        margin: 5;
+        width: 500px;
+      }
+      li {
+        clear: both;
+        margin: 5;
+      }
+      li button {
+        /* border: none; */
+        /* outline: none; */
+        color: red;
+        float: right;
+        cursor: pointer;
+        /* font-size: 20px; */
       }
     </style>
   </head>
@@ -40,12 +53,25 @@
           {%
           endif
           %}
-        />{{ d.description }}
+        />
+        {{ d.description }}
+        <button class="delete-todos" data-id="{{ d.id }}">&cross;</button>
       </li>
       {% endfor %}
     </ul>
 
     <script>
+      // script for deleting todos
+      const to_delete = document.querySelectorAll(".delete-todos");
+      for (let index = 0; index < to_delete.length; index++) {
+        const delete_todo = to_delete[index];
+        delete_todo.onclick = function (e) {
+          const todoId = e.target.dataset["id"];
+          fetch("/todos/" + todoId + "/delete-todos", {
+            method: "DELETE",
+          });
+        };
+      }
       // script for the check boxes
       const checkboxes = document.querySelectorAll(".check-completed");
       for (let index = 0; index < checkboxes.length; index++) {

@@ -93,6 +93,27 @@ def set_completed_todo(todo_id):
     else:
         return redirect(url_for('index'))
 
+@app.route('/todos/<todo_id>/delete-todos', methods=['DELETE'])
+def delete_todo(todo_id):
+    error = False
+    # creating transactions
+    try:
+        Todo.query.filter_by(id=todo_id).delete()
+        db.session.commit()
+    except:
+        error = True
+        db.session.rollback()
+        print(sys.exc_info())
+    finally:
+        db.session.close()
+    #end of transactions
+
+    if error:
+        abort (400)
+    else:
+        print("Todo deleted")
+        return jsonify({'success': True})
+
 # this is another option for compiling
 
 if __name__ == '__main__':
