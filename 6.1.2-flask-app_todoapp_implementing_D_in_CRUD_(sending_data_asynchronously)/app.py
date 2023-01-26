@@ -5,8 +5,8 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)   #initializing the app
 
 # creating a link to the database
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost:5432/todoapp'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost:5432/todoapp'     #catering for windows operating system
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost:5432/todoapp'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost:5432/todoapp'     #catering for windows operating system
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False        #silencing any deprecation warnings
 
 # linking an instance of the dabase to the flask app
